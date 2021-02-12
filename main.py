@@ -12,8 +12,8 @@ if __name__ == '__main__':
     y = np.array([y]).T
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    hidden_layer = layers.Layer(dims=4, input_dims=2)
-    output_layer = layers.Layer(dims=1, input_dims=4)
+    hidden_layer = layers.Layer(dims=4, input_dims=2, activation_function=functions.leaky_relu)
+    output_layer = layers.Layer(dims=1, input_dims=4, activation_function=functions.sigmoid)
 
     model = networks.MultiLayerNN(hidden_layer, output_layer, loss_function=losses.squared_error)
 

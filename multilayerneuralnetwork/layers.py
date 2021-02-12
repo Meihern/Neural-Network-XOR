@@ -26,3 +26,7 @@ class Layer:
     def __set_activation_function_derivative(self):
         if self.activation_function == functions.sigmoid:
             return functions.sigmoid_derivative
+        if self.activation_function == functions.relu:
+            return functions.relu_derivative
+        if self.activation_function == functions.leaky_relu:
+            return functions.leaky_relu_derivative
