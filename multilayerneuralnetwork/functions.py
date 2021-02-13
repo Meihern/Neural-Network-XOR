@@ -14,7 +14,7 @@ def relu(x) -> np.ndarray:
 
 
 def relu_derivative(x) -> np.ndarray:
-    return np.where(x > 0, x, 0)
+    return np.where(x > 0, 1, 0)
 
 
 def leaky_relu(x, a=0.01) -> np.ndarray:
