@@ -15,7 +15,7 @@ class Layer:
         if weights is None:
             self.weights = np.random.uniform(-1, 1, (self.input_dims, self.dims))
         if bias is None:
-            self.bias = np.random.uniform(-1, 1, (1, dims))
+            self.bias = np.random.uniform(-1, 1, (1, self.dims))
 
     def calcul_output(self, input_data):
         self.output = self.activation_function(self.__calcul_input(input_data))
